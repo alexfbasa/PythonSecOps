@@ -6,14 +6,7 @@ print(os.getuid())
 print(os.getenv("PATH"))
 print(os.environ)
 for environ in os.environ:
-	print(environ)
+    print(environ)
 
 for key, value in os.environ.items():
-	print(key,value)
-
-
-
-
-                   
-            
-    
+    print(key, value)

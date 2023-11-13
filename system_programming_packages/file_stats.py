@@ -1,6 +1,6 @@
 import os
 import time
-    
+
 file = "file_stats.py"
 st = os.stat(file)
 print("file stats: ", file)
