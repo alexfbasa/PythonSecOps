@@ -1,5 +1,6 @@
 import os
 from collections import Counter
+
 counts = Counter()
 for currentdir, dirnames, filenames in os.walk('.'):
     for filename in filenames:

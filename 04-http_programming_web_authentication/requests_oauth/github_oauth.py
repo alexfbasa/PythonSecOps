@@ -14,11 +14,11 @@ print('Please go here and authorize,', authorization_url)
 
 redirect_response = input('Paste the full redirect URL here:')
 
-github.fetch_token(token_url, client_secret=client_secret,authorization_response=redirect_response)
+github.fetch_token(token_url, client_secret=client_secret, authorization_response=redirect_response)
 
 response = github.get('https://api.github.com/user')
 print(response.content.decode())
 
 dict_response = json.loads(response.content.decode())
-for key,value in dict_response.items():
-	print(key,"-->",value)
+for key, value in dict_response.items():
+    print(key, "-->", value)

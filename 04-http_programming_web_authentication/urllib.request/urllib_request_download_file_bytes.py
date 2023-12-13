@@ -6,7 +6,7 @@ file_size = 0
 while True:
     bytes = file_gz.read(10000)
     if len(bytes) < 1:
-    	break
+        break
     file_size = file_size + len(bytes)
     file.write(bytes)
 

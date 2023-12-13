@@ -14,18 +14,17 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Port scanning', epilog=description,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("-target", metavar='TARGET', dest="target", help="target to scan",required=True)
-    parser.add_argument("-ports", dest="ports", 
+    parser.add_argument("-target", metavar='TARGET', dest="target", help="target to scan", required=True)
+    parser.add_argument("-ports", dest="ports",
                         help="Please, specify the target port(s) separated by comma[80,8080 by default]",
-                        default = "80,8080")    
+                        default="80,8080")
     parser.add_argument('-v', dest='verbosity', default=0, action="count",
                         help="verbosity level: -v, -vv, -vvv.")
     parser.add_argument("--open", dest="only_open", action="store_true",
                         help="only display open ports", default=False)
-   
 
     params = parser.parse_args()
-    print("Params:"+str(params))
+    print("Params:" + str(params))
     print("Target:" + params.target)
     print("Verbosity:" + str(params.verbosity))
     print("Only open:" + str(params.only_open))
